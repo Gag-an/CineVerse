@@ -1,0 +1,14 @@
+.movies-page {
+  padding: 40px;
+}
+
+.movies-page h1 {
+  margin-bottom: 30px;
+  font-size: 40px;
+}
+
+.movies-grid {
+  display: flex;
+  gap: 25px;
+  flex-wrap: wrap;
+}

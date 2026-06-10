@@ -1,0 +1,51 @@
+.hero-section {
+  height: 85vh;
+
+  background-image:
+    linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
+    url("https://images.unsplash.com/photo-1440404653325-ab127d49abc1");
+
+  background-size: cover;
+  background-position: center;
+
+  display: flex;
+  align-items: center;
+  padding-left: 80px;
+}
+
+.overlay h1 {
+  font-size: 70px;
+  max-width: 700px;
+  margin-bottom: 20px;
+}
+
+.overlay p {
+  font-size: 22px;
+  margin-bottom: 30px;
+  color: #ddd;
+}
+
+.overlay button {
+  background-color: #e50914;
+  border: none;
+  color: white;
+  padding: 15px 35px;
+  font-size: 18px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.movies-section {
+  padding: 50px;
+}
+
+.movies-section h2 {
+  margin-bottom: 30px;
+  font-size: 35px;
+}
+
+.movies-grid {
+  display: flex;
+  gap: 25px;
+  flex-wrap: wrap;
+}
