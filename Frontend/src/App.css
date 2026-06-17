@@ -1,141 +1,18 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+/* CineVerse Global Helper Classes */
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 24px;
 }
 
-body {
-  background-color: #141414;
-  color: white;
-  font-family: Arial, Helvetica, sans-serif;
+.text-gradient {
+  background: linear-gradient(135deg, #fff 30%, #a0a0ab 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
-/* NAVBAR */
-
-nav {
-  background-color: #000;
-  padding: 20px;
-  display: flex;
-  gap: 20px;
-}
-
-nav a {
-  color: white;
-  text-decoration: none;
-  font-size: 18px;
-  transition: 0.3s;
-}
-
-nav a:hover {
-  color: #e50914;
-}
-
-/* PAGES */
-
-h1 {
-  text-align: center;
-  margin-top: 30px;
-  margin-bottom: 30px;
-}
-
-/* LOGIN PAGE */
-
-.login-container {
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.login-box {
-  background-color: #222;
-  padding: 40px;
-  border-radius: 10px;
-  text-align: center;
-  width: 300px;
-}
-
-.login-box h1 {
-  margin-bottom: 20px;
-}
-
-button {
-  background-color: #e50914;
-  color: white;
-  border: none;
-  padding: 12px 20px;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 16px;
-  transition: 0.3s;
-}
-
-button:hover {
-  background-color: #b20710;
-}
-
-/* MOVIES */
-
-.movies-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 20px;
-  padding: 20px;
-}
-
-/* MOVIE CARD */
-
-.movie-card {
-  background-color: #222;
-  width: 250px;
-  padding: 20px;
-  border-radius: 10px;
-  transition: 0.3s;
-}
-
-.movie-card:hover {
-  transform: scale(1.05);
-}
-
-.movie-card h2 {
-  margin-bottom: 10px;
-  color: #e50914;
-}
-
-.movie-card p {
-  font-size: 16px;
-}
-
-
-/* DASHBOARD */
-
-.dashboard-container {
-  padding: 20px;
-}
-
-.hero-section {
-  background: linear-gradient(to right, #000000, #1f1f1f);
-  padding: 60px 20px;
-  border-radius: 12px;
-  text-align: center;
-  margin-bottom: 40px;
-}
-
-.hero-section h1 {
-  font-size: 48px;
-  margin-bottom: 20px;
-  color: #e50914;
-}
-
-.hero-section p {
-  font-size: 18px;
-  margin-bottom: 25px;
-  color: #ccc;
-}
-
-.section-title {
-  margin-left: 20px;
-  margin-bottom: 20px;
-  color: white;
+.text-primary-gradient {
+  background: linear-gradient(135deg, var(--primary) 0%, #ff5252 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
