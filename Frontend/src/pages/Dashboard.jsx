@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { useNavigate, useSearchParams } from "react-router-dom";
 import { useAuth } from "../context/authStore";
-import {
+import api, {
   getTrendingMovies,
   getUserBookings,
   getMovies,
@@ -15,8 +15,7 @@ import {
   getAllUsers,
   updateUserRole,
   deleteUser,
-  updateUserStatus,
-  api
+  updateUserStatus
 } from "../services/api";
 import Navbar from "../components/Navbar";
 import MovieCard from "../components/MovieCard";
