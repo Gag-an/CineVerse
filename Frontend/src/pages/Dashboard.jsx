@@ -229,20 +229,19 @@ function Dashboard() {
 
   const refreshOwnerShows = () => {
     if (!user) return;
-    // Collect all shows for all movies concurrently to prevent blocking lag
+    // Fetch shows sequentially to prevent backend connection overload
     getMovies().then(async (allMovies) => {
       try {
-        const promises = allMovies.map(async (m) => {
+        let allShows = [];
+        for (const m of allMovies) {
           try {
             const res = await api.get(`/movies/${m.id}/shows`);
-            return res.data.map(s => ({ ...s, movieTitle: m.title, movieId: m.id }));
+            const showsForMovie = res.data.map(s => ({ ...s, movieTitle: m.title, movieId: m.id }));
+            allShows.push(...showsForMovie);
           } catch (err) {
             console.error(`Error loading shows for movie ${m.title}:`, err);
           }
-          return [];
-        });
-        const results = await Promise.all(promises);
-        const allShows = results.flat();
+        }
         
         const ownerCinema = user.cinemaName?.trim().toLowerCase();
         const ownerCity = user.city?.trim().toLowerCase();
