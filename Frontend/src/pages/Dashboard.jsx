@@ -15,7 +15,8 @@ import {
   getAllUsers,
   updateUserRole,
   deleteUser,
-  updateUserStatus
+  updateUserStatus,
+  api
 } from "../services/api";
 import Navbar from "../components/Navbar";
 import MovieCard from "../components/MovieCard";
@@ -233,11 +234,8 @@ function Dashboard() {
       try {
         const promises = allMovies.map(async (m) => {
           try {
-            const res = await fetch(`/api/movies/${m.id}/shows`);
-            if (res.ok) {
-              const data = await res.json();
-              return data.map(s => ({ ...s, movieTitle: m.title, movieId: m.id }));
-            }
+            const res = await api.get(`/movies/${m.id}/shows`);
+            return res.data.map(s => ({ ...s, movieTitle: m.title, movieId: m.id }));
           } catch (err) {
             console.error(`Error loading shows for movie ${m.title}:`, err);
           }
